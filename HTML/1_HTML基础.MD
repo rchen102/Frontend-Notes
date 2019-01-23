@@ -1,13 +1,13 @@
-### 01_HTML基础
+## 1_HTML基础
 
-#### 1 HTML概述
+### 1 HTML概述
 - **定义**：html全称为HyperText Markup Language，译为<font color=#0000ff>**超文本标记语言**</font>，非编程语言，是一种描述性的标记语言。
 	- 超文本：音频，视频，图片称为超文本。
 	- 标记 ：<英文单词或者字母>称为标记，一个HTML页面都是由各种标记组成。
 - **作用**：HTML是负责描述文档**语义**的语言。
 - **注意**：HTML语言不是一个编程语言(有编译过程)，而是一个**标记语言**(<font color=#0000ff>**没有编译过程**</font>)，HTML页面直接由浏览器解析执行。
 
-#### 2 HTML结构
+### 2 HTML结构
 - **声明部分**：
 	- 文档声明头，DocType Declaration，简称DTD。告诉浏览器使用哪个版本的HTML规范来渲染文档。DOCTYPE不存在或形式不正确会导致HTML文档以混杂模式呈现。
 	- 为什么H5不需要DTD：HTML5不基于SGML（Standard Generalized Markup Language 标准通用标记语言），因此不需要对DTD（DTD 文档类型定义）进行引用，但是需要DOCTYPE来规范浏览器行为。

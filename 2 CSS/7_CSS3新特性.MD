@@ -12,4 +12,4 @@
 - 盒模型
 - 伸缩布局盒模型（弹性盒）
 - 多媒体查询
-[汇总链接](https://blog.csdn.net/chandoudeyuyi/article/details/69206236)
+- [汇总链接](https://blog.csdn.net/chandoudeyuyi/article/details/69206236)

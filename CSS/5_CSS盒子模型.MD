@@ -5,7 +5,6 @@
 	- border：边框
 	- margin：外边距
 
-
 ### 1 padding
 - **padding区域有颜色**：background-color将填充所有border以内的区域
 - **padding四个方向**：顺时针顺序（上右下左）

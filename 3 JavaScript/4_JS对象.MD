@@ -1,4 +1,4 @@
-## 3_JS对象
+## 4_JS对象
 - 内置对象：由ES标准中定义的对象，Math、String、Number、Boolean、Function、Object
 - 宿主对象：由JS的运行环境提供的对象，主要指由浏览器提供的对象，BOM、DOM
 - 自定义对象：自主创建的对象
@@ -40,7 +40,7 @@
 
 - **工厂模式**：
 	- 优点：解决了创建多个相似对象问题
-	- 缺点：类型均为`Object`，没有解决对象识别的问题
+	- 缺点：类型均为`Object`，没有解决类型标识的问题
 
 	```javascript
 	function createPerson(name){   // 一般首字母小写
@@ -101,7 +101,7 @@
 
 - **原型链**：
 	- 本质：访问一个对象的属性时，不仅会在对象自身上搜寻，还会搜寻对象的原型，以及对象的原型的原型，直到原型链的末尾
-	- 注： `hasOwnProperty(‘propertyName’)`是JS中唯一处理属性不会遍历原型链的方法
+	- 注： `hasOwnProperty('propertyName')`是JS中唯一处理属性不会遍历原型链的方法
 	- 作用：实现继承
 	```javascript
 	function Person(name){ 

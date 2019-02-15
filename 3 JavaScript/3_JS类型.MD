@@ -1,4 +1,4 @@
-## 2_JS类型
+## 3_JS类型
 - 基本数据类型
 	- Undefined
 	- Null
@@ -46,7 +46,7 @@
 - **特点**：
 	- 特殊值：
 		- `Number.MAX_VALUE`,`Number.MIN_VALUE`：最大值最小值
-		- `NaN`：表示Not a Number，非数字；`isNaN()`：任何不能被转化成数值的值，都会返回`true`
+		- `NaN`：表示Not a Number，非数字，与所有值都不相等，包括它自己；`isNaN()`：任何不能被转化成数值的值，都会返回`true`
 		- `Infinity`, `-Infinity`：无穷大，负无穷大
 	- `JS`中有`+0`和`-0`，加法运算中无区别，但是除法运算如不检测可能会得到负无穷大
 		- 检测方式：检查`1/x`是`Infinity`还是`-Infinity`

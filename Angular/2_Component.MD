@@ -26,7 +26,7 @@ export class AppComponent {
 }
 ```
 
-### 2 Explanation
+### 2 Detail
 
 Each component has its own template(`html`), its own business logic(`ts`) and style(`css`)
 
@@ -34,8 +34,8 @@ Decorator: `@Component()` To mark it as a component. Pass a JS Object to configu
 
 Selector: it actuall works like css selector, we could select by
 - Element: `selector: 'app-root'`
-- Attribute: `selector: '[app-root]'`
-- Class: `selector: '.app-root'` (Do not work by ID and pseudo selectors)
+- Attribute: `selector: '[app-root]'` => directive with a template
+- Class: `selector: '.app-root'` (Does not work by ID and pseudo selectors)
 
 Before use a component, we will have to register it in a module so that Angular know this component exists. Register it in the `declarations` 
 

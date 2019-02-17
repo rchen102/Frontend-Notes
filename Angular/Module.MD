@@ -21,5 +21,5 @@ import { NgModule } from '@angular/core';
 export class AppModule { }
 ```
 
-### Expalnation
+### Detail
 `imports`: add some ohter modules to this module. Angular are split into several modules

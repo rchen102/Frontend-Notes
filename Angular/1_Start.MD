@@ -1,7 +1,7 @@
-## 1_Start App
+## 1_Start
 
 `Angular` is a JavaScript framework to help build a fast SPA web application.
-`Angular2`(Referred as Angular) almost rewrites `Angular1`(Referred as `AngularJS`), and got updated as `Angular3-7`
+`Angular2`(Referred as `Angular`) almost rewrites `Angular1`(Referred as `AngularJS`), and got updated as `Angular3-7`
 
 Angular in end is a JS framework, changing the `DOM` at runtime.
 
@@ -14,18 +14,20 @@ ng serve
 ```
 
 #### Install bootstrap: (Optional, used for css)
-`npm install --save bootstrap@3`
-
+```
+npm install --save bootstrap@3
+```
 Then go to `angular.json` file, `architect` -> `build` -> `styles`
+
 Add another line: `"node_modules/bootstrap/dist/css/bootstrap.min.css"`
-(BTW: `styles.css`: a global style sheet)
+(`styles.css`: a global style sheet)
 
 #### CLI (Command Line Interface)
 Takes our code, bundles it up, adds all the angular logic from angular to it, and therefore create a bunch of script files, and inject these scripts into index.html file
 
 ### 2 How Angular works
+`index.html`: The actual single page served by server
 
-`index.html`: The actual single page served by server.
 `AppComponent`: the root component, write other components in root component
 
 - `index.html` is served, contain a bunch of scripts (bundled by CLI)

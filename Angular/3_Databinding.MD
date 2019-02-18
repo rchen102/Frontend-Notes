@@ -13,21 +13,34 @@ Between the `{{ }}`, you should always return a string.
 	
 ### 2 Property Binding
 
-- Already exist property or dierective:
+#### Already exist property or dierective:
 ```
 [property]="variable or function()"   // Bind HTML element property(attribute)
 [directive]="variable or function()"  // Bind directives
 [variable]="value"    // Pass data to child
 ```
 	
-- Custom property
+#### Custom property
+
+**Data flow to child**
+
+- Parent component
+	- `postList` is an array in parent's TS file
+
+- Child component
+	- `post` is a variable in child's TS file
+	- `@Input()`: All properties of components are **only** accessible inside these component
+
 ```
-@Input() posts = [];  // In the file of app-post-list
-<app-post-list [posts]="storedPosts"> // In the parent component
+<app-post [post]="let post of postList"></app-post-list> // In parent component
+
+// In the TS file of app-post
+@Input() element;
+@Input(‘Alias’) element;  // Could use Alias as property name in parent
 ```
 
 ### 3 Event Binding
-- Already built event
+#### Already built event
 
 `$event`: Will be the data emitted with that event, should be used between `""`. And in the function which `event` is passed in, use `event.target.value` to get the data
 
@@ -36,7 +49,7 @@ Between the `{{ }}`, you should always return a string.
 (click)="onAddPost($event)"   // Not onClick which is html event
 ```
 
-- Custom event
+#### Custom event
 ```
 @Output() postCreated = new EventEmitter<Type of data>(); // In the file of app-post-create 
 // Output decorator tells angular that this event can be listened to at outside the component

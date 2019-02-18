@@ -2,7 +2,7 @@
 
 Angular is a JavaScript framework to help build a fast SPA web application.
 
-Angular2(Referred as `Angular`) completely rewrite Angular1(Referred as `AngularJS`), and got updated as Angular3-7
+Angular2 (Referred as `Angular`) completely rewrite Angular1 (Referred as `AngularJS`), and got updated as Angular3-7
 
 Angular in end is a JS framework, changing the `DOM` at runtime.
 

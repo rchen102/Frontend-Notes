@@ -12,7 +12,7 @@ Components are kind of directives with template.
 
 Directives that will change the DOM
 
-- `*ngIf`: conditional add or remove html elements from DOM 
+#### `*ngIf`: conditional add or remove html elements from DOM 
 
 ```
 <p *ngIf="LikeU; else DoNotLikeU">Hello</p>
@@ -22,7 +22,7 @@ Directives that will change the DOM
 ```
 Between the `""`, you should put or return a boolean
 
-- `*ngFor`: loop through all elements 
+#### `*ngFor`: loop through all elements 
 
 ```
 <post *ngFor="let item of posts; let i = index"></post>
@@ -34,14 +34,14 @@ Directives that do not change the DOM, onli change the element where they are
 
 The name is due to it just looks like normal HTML attributes.
 
-- `ngStyle`: use property binding to dynamically change style
+#### `ngStyle`: use property binding to dynamically change style
 
 ```
 <p [ngStyle]="{backgroundColor: getColor()}">Hello</p>  // Use camel case or 'background-color' to be a valid JS property name
 ```
 Between the `""`, you should put a JS object {styleName: styleValue}
 
-- `ngClass`: use property binding to dynamically add or remove css classes
+#### `ngClass`: use property binding to dynamically add or remove css classes
 
 ```
 <p [ngClass]="{}">Hello</p>

@@ -11,6 +11,7 @@ Easily to maintain and manage
 Create a Component:
 ```
 ng g c name
+ng g c name --spec false // without test file
 ```
 
 Example code: 

@@ -20,9 +20,7 @@ Between the `{{ }}`, you should always return a string.
 [variable]="value"    // Pass data to child
 ```
 	
-#### Custom property
-
-**Data flow to child**
+#### Custom property (Data flow from parent to child)
 
 - Parent component
 	- `postList` is an array in parent's TS file
@@ -36,7 +34,7 @@ Between the `{{ }}`, you should always return a string.
 
 // In the TS file of app-post
 @Input() element;
-@Input(‘Alias’) element;  // Could use Alias as property name in parent
+@Input('Alias') element;  // Could use Alias as property name in parent
 ```
 
 ### 3 Event Binding
@@ -49,13 +47,22 @@ Between the `{{ }}`, you should always return a string.
 (click)="onAddPost($event)"   // Not onClick which is html event
 ```
 
-#### Custom event
-```
-@Output() postCreated = new EventEmitter<Type of data>(); // In the file of app-post-create 
-// Output decorator tells angular that this event can be listened to at outside the component
-this.postCreated.emit(post);
+#### Custom event (Parent bind child's event)
 
+- Parent component
+	- `onPostAdded()` is a function in parent's TS file
+
+- Child component
+	- `@Output()`: Output decorator tells angular that this event can be listened to at outside the component
+	- The data emitted will be the parameter `$event`
+
+```
 <app-post-create (postCreated)="onPostAdded($event)">  // In the parent component
+
+// In the TS file of app-post-create 
+@Output() postCreated = new EventEmitter<Type of data>(); 
+@Output('Alias') postCreated = new EventEmitter<Type of data>();  // Could use Alias as property name in parent
+this.postCreated.emit(post);
 ```	
 
 ### 4 Two way Binding

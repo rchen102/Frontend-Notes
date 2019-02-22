@@ -31,8 +31,6 @@ Each component has its own template(`html`), its own business logic(`ts`) and st
 
 Decorator: `@Component()` To mark it as a component. Pass a JS Object to configure it
 
-
-
 Before use a component, we will have to register it in a module so that Angular know this component exists. Register it in the `declarations` 
 
 ### 2 Enhanced
@@ -69,7 +67,7 @@ console.log(nameInput.value); // return the name, like 'xiaomin'
 - `@ViewChild(selctor)`: we should pass a selctor 
 	- It can be a localreference, should pass as a string
 	- It can be a Component Type
-- Take care: **should not** change element through local reference, Angular has a better way to access DOM, like directives
+- **Attention**: should **not** change element through local reference, Angular has a better way to access DOM, like directives
 
 ```
 <input type="text" #nameInput>
@@ -84,6 +82,7 @@ console.log(nameInputContent.nativeElement.value); // return the name, like 'xia
 
 - Background: Everything between your own component tag will be lost by default. 
 - `ng-content` could solve this problem, project content into components
+- `@ContentChild()`
 
 ```
 <app-list><p>Without ng-content, the message will get lost</p></app-list> // Project content into app-list
@@ -94,5 +93,32 @@ console.log(nameInputContent.nativeElement.value); // return the name, like 'xia
 </div>
 ```
 
+### 3 Lifecycle
 
 
+**ngOnChanges**: 
+- called when a component is created or after a bound input property(@Input) changes
+- run first after constructor
+
+**ngOnInit**: 
+- called once the component is initialized (has not been added to DOM yet or not displayed)
+- run after the constructor and ngOnChanges
+
+**ngDoCheck**: 
+- called during every change detection run
+- change detection is a system Angular use to check whether there is a change in the component
+
+**ngAfterContentInit**:
+- called after content(ng-content) has been projected into view
+
+**ngAfterContentCheck**:
+- called every time the projected content has been checked
+
+**ngAfterViewInit**: 
+- called after the component's view has been initialized
+
+**ngAfterViewChecked**:
+- called every time the view(and child views) have been checked
+
+**ngOnDestroy**:
+- called once the component is about to be destroyed
